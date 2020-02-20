@@ -1,0 +1,15 @@
+<nav class="navbar sticky-top navbar-light bg-primary justify-content-center">
+  <a class="navbar-brand" href="#">Create your own cocktail :)</a>
+</nav>
+
+<div class="banner">
+
+</div>
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+  <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "new cocktail", new_cocktail_path %>
