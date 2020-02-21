@@ -1,15 +1,41 @@
-<nav class="navbar sticky-top navbar-light bg-primary justify-content-center">
-  <a class="navbar-brand" href="#">Create your own cocktail :)</a>
-</nav>
-
-<div class="banner">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="banner">
+  <div class="top-left">
+    <h1>Lets get f*cking wasted!</h1>
+    <br>
+    <a href="" class="btn btn-light">Make your cocktail</a>
+  </div>
 </div>
 
-<ul>
-  <% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
-  <% end %>
-</ul>
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Drink one
+  </div>
 
-<%= link_to "new cocktail", new_cocktail_path %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+    Drink two
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+    Drink three
+  </div>
+</div>
+
+    <ul class="grid">
+      <% @cocktails.each do |cocktail| %>
+      <li><%= link_to cocktail.name, cocktail_path(cocktail.id) %></li>
+      <% end %>
+    </ul>
+
+
+</body>
+</html>
+
+
+
